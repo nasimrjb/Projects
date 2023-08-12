@@ -29,6 +29,26 @@
 #         if char == '$':
 #             count += 1
 #     return count
-
-
 # print(count_dollar_signs(input()))
+# def speak(animal="dog"):
+#     if animal == "pig":
+#         return "oink"
+#     elif animal == "duck":
+#         return "quack"
+#     elif animal == "cat":
+#         return "meow"
+#     elif animal == "dog":
+#         return "woof"
+#     else:
+#         return "?"
+
+
+# print(speak(input()))
+
+
+def spik(animal="dog"):
+    dictt = {"dog": "bark", "pig": "oink", "duck": "quack", "cat": "meow"}
+    return dictt.get(animal)
+
+
+print(spik(input()))
