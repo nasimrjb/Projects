@@ -38,11 +38,40 @@ last_element([]) # None
 '''
 
 
-def last_element(a):
-    if a[-1]:
-        return a[-1]
-    else:
-        return None
+# def last_element(a):
+#     if a[-1]:
+#         return a[-1]
+#     else:
+#         return None
 
 
-print(last_element(list(input())))
+# print(last_element(list(input())))
+
+'''
+number_compare(1,1) # "Numbers are equal"
+number_compare(1,0) # "First is greater"
+number_compare(2,4) # "Second is greater"
+'''
+
+
+# def number_compare(a, b):
+#     if a > b:
+#         print("first is greater")
+#     elif a < b:
+#         print("second is greater")
+#     else:
+#         print("numbers are equal")
+
+
+# a = input('enter first number: ')
+# b = input("enter 2nd number: ")
+
+# number_compare(a, b)
+
+
+def letterCounter(a, b):
+    return a.count(b)
+
+
+a = input("please input the word")
+b = input('input the letter')
