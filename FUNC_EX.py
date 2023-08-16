@@ -69,9 +69,72 @@ number_compare(2,4) # "Second is greater"
 # number_compare(a, b)
 
 
-def letterCounter(a, b):
-    return a.count(b)
+# def letterCounter(a, b):
+#     return a.count(b)
 
 
-a = input("please input the word")
-b = input('input the letter')
+# a = input("please input the word")
+# b = input('input the letter')
+# c = letterCounter(a, b)
+# print(c)
+
+# def multiple_letter_count(a):
+#     b = {i: a.count(i) for i in a}
+#     return b
+
+
+# print(multiple_letter_count(input("input string: ")))
+
+'''
+list_manipulation([1,2,3], "remove", "end") # 3
+list_manipulation([1,2,3], "remove", "beginning") #  1
+list_manipulation([1,2,3], "add", "beginning", 20) #  [20,1,2,3]
+list_manipulation([1,2,3], "add", "end", 30) #  [1,2,3,30]
+'''
+
+# def list_manipulation(a,b,c):
+#     if b == "remove":
+#         if c == "end":
+#             return a.pop()
+#     if
+
+
+# def is_palang(a):
+#     b = [a[i] for i in range(len(a)-1, 0, -1)]
+#     return print(b)
+
+
+# is_palang(input())
+# def frequency(a, b):
+#     print(a.count(b))
+
+
+# a = input("input a list: ")
+# b = input("input the word")
+# frequency(a, b)
+# def multiply_even_numbers(lst):
+#     total = 1
+#     for val in lst:
+#         if val % 2 == 0:
+#             total = total * val
+#     print(total)
+
+# def intersection(a, b):
+#     [i for i in a if i in b]
+
+def isEven(num):
+    return num % 2 == 0
+
+
+def partition(a, b):
+    lst1 = []
+    lst2 = []
+    for i in a:
+        if b(i):
+            lst1.append(i)
+        else:
+            lst2.append(i)
+    print([lst1] + [lst2])
+
+
+partition([1, 2, 3, 4], isEven)  # [[2,4],[1,3]]
