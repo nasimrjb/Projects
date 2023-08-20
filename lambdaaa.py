@@ -14,6 +14,14 @@
 
 
 # remove_negatives([1, -3, 4, 5, -9, 0, -7])
-def extremes(l):
-    m = sorted(l)
-    return (m[0], m[-1])
+# def extremes(l):
+#     m = sorted(l)
+#     return (m[0], m[-1])
+def max_magnitude(lst):
+    result = []
+    for i in lst:
+        result.append(abs(i))
+    print(max(result))
+
+
+max_magnitude([1, 2, -900, 56, 10])
