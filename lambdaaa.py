@@ -33,11 +33,17 @@
 # sum_even_numbers(1, 2, 3, 4, 5, 6)
 # def sum_floats(*args):
 #     print(sum(arg for args in args if type(arg) == float))
-def interleave(str1, str2):
-    a = list(zip(str1, str2))
+# def interleave(str1, str2):
+#     a = ["".join(x) for x in tuple(zip(str1, str2))]
+#     print("".join(a))
 
 
-str1 = "salam "
-str2 = "olaghe"
+# str1 = "salam "
+# str2 = "olaghe"
 
-interleave(str1, str2)
+# interleave(str1, str2)
+def triple(lst):
+    print(list(map(lambda x: x*3, filter(lambda x: (x % 4) == 0, lst))))
+
+
+triple([1, 2, 3, 4, 5, 6, 7, 8, 9, 19, 24])
