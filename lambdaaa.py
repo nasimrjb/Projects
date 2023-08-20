@@ -17,11 +17,27 @@
 # def extremes(l):
 #     m = sorted(l)
 #     return (m[0], m[-1])
-def max_magnitude(lst):
-    result = []
-    for i in lst:
-        result.append(abs(i))
-    print(max(result))
+# def max_magnitude(lst):
+#     result = []
+#     for i in lst:
+#         result.append(abs(i))
+#     print(max(result))
 
 
-max_magnitude([1, 2, -900, 56, 10])
+# max_magnitude([1, 2, -900, 56, 10])
+
+
+# def sum_even_numbers(*args):
+#     print(sum(arg for arg in args if arg % 2 == 0))
+
+# sum_even_numbers(1, 2, 3, 4, 5, 6)
+# def sum_floats(*args):
+#     print(sum(arg for args in args if type(arg) == float))
+def interleave(str1, str2):
+    a = list(zip(str1, str2))
+
+
+str1 = "salam "
+str2 = "olaghe"
+
+interleave(str1, str2)
