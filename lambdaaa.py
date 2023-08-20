@@ -47,3 +47,12 @@ def triple(lst):
 
 
 triple([1, 2, 3, 4, 5, 6, 7, 8, 9, 19, 24])
+
+
+def extract(lst):
+    print([" ".join(lst[0].values()), " ".join(lst[1].values())])
+
+
+names = [{'first': 'Elie', 'last': 'Schoppik'},
+         {'first': 'Colt', 'last': 'Steele'}]
+extract(names)  # ['Elie Schoppik', 'Colt Steele']
