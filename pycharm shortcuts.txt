@@ -1,0 +1,14 @@
+alt + enter -> quick fix of error
+
+ctrl + d -> line repeat
+
+ctrl + shift + arrow up -> move line up
+
+ctrl + / ---> comment multiple lines
+
+ctrl B on a function ---> see its class
+CTRL SHIFTL ALT J---> ctrl multiple lines same word
+
+shift + f6 -> replace all for a word
+
+ctrl + e -> recent files
