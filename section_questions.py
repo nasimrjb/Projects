@@ -18,8 +18,11 @@
 
 
 ####################################################
-def remove_every_oder (lst):
-    l =[]
-    for i in range (len(lst)-1):
-        if i%2 == 0:
-            
+
+# def remove_every_other(lst):
+#     return [val for i, val in enumerate(lst) if i % 2 == 0]
+
+
+# print(remove_every_other([1, 2, 3, 4, 5, 6]))
+
+####################################################
