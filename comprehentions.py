@@ -65,16 +65,20 @@ heros = ['Batman', 'Superman', 'Spiderman', 'Wolverine', 'Deadpool']
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
-def gen_func(nums):
-  for n in nums:
-    yield n * n
+# def gen_func(nums):
+#   for n in nums:
+#     yield n * n
 
 
-my_gen = gen_func(nums)
+# my_gen = gen_func(nums)
 
-for i in my_gen:
-  print(i)
+# for i in my_gen:
+#   print(i)
 
-  mi_gen = (m * m for m in nums)
+
+##################   INTERESTING   ########################
+
+
+mi_gen = (m * m for m in nums)
 for i in mi_gen:
   print(i)
