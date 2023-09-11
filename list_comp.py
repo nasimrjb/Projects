@@ -68,13 +68,49 @@ lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 ###############################################
 
-def find_factors(num):
-  # return [x + 1 for x in range(num) if num % (x + 1) == 0 and x != 0]
-    lst = []
-    for i in range(num):
-        if i != 0 and num % i == 0:
-            lst.append(i)
-    return lst
+# def find_factors(num):
+#   # return [x + 1 for x in range(num) if num % (x + 1) == 0 and x != 0]
+#     lst = []
+#     for i in range(num):
+#         if i != 0 and num % i == 0:
+#             lst.append(i)
+#     return lst
 
 
-print(find_factors(400))
+# print(find_factors(400))
+
+
+####################################################
+
+# def includes(collection, val, start=None):
+#     if type(collection) == dict:
+#         return val in collection.values()
+#     if start == None:
+#         return val in collection
+#     else:
+#         return val in collection[start:]
+
+
+# print(includes([1, 2, 3], 1))  # True
+# print(includes([1, 2, 3], 1, 2))  # False
+# print(includes({'a': 1, 'b': 2}, 1))  # True
+# print(includes({'a': 1, 'b': 2}, 'a'))  # False
+# print(includes('abcd', 'b'))  # True
+# print(includes('abcd', 'e'))  # False
+
+#######################################################
+
+
+# def repeat(string, num):
+#     str1 = ""
+#     for i in range(num):
+#         str1 += string
+#     print(str1)
+
+
+# repeat('*', 3)  # '***'
+# repeat('Nasim Rajabi', 2)  # 'abcabc'
+# repeat('abc', 0)  # ''
+
+
+#######################################################
