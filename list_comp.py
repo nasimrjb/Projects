@@ -114,3 +114,28 @@ lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 #######################################################
+
+# def truncate(str, num):
+#     if num < 3:
+#         print("Truncation must be at least 3 characters.")
+#     elif num >= len(str) + 3:
+#         return (str)
+#     new_str = ''
+#     for i in range(num - 3):
+#         new_str += str[i]
+#     print(new_str + "...")
+
+
+# truncate("Super cool", 2)  # "Truncation must be at least 3 characters."
+# truncate("Super cool", 1)  # "Truncation must be at least 3 characters."
+# truncate("Super cool", 0)  # "Truncation must be at least 3 characters."
+# truncate("Hello World", 6)  # "Hel..."
+# truncate("Problem solving is the best!", 10)  # "Problem..."
+# truncate("Another test", 12)  # "Another t..."
+# truncate("Woah", 4)  # "W..."
+# truncate("Woah", 3)  # "..."
+# truncate("Yo", 100)  # "Yo"
+# truncate("Holy guacamole!", 152)  # "Holy guacamole!"
+
+
+####################################################################
