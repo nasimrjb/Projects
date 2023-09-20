@@ -8,4 +8,8 @@ if num == 0:
     print(f"there are no results for {term}")
 if num == 1:
     print(f"there are 1 results for {term}")
-print(res["results"])
+
+print("number1: " + res["results"][0]['joke'])
+print("number2: " + res["results"][1]['joke'])
+print("number3: " + res["results"][2]['joke'])
+print("number4: " + res["results"][3]['joke'])
