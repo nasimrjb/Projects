@@ -16,10 +16,23 @@
 
 ##############################################################################
 
-with open('intro.txt') as f:
-    data = f.read()
-print(data)
-print(f.closed)
+# with open('story.txt') as f:
+#     data = f.read()
+# print(data)
+# print(f.closed)
 
 
 ##############################################################################
+# with open('story.txt', 'w') as file:
+#     file.write("writing is great.\n")
+
+#############################################################################
+def copy(name, new_name):
+    with open(name, 'r', encoding='utf-8') as f:
+        x = f.read()
+    with open(new_name, 'w', encoding='utf-8') as j:
+        for i in x[::-1]:
+            j.write(i)
+
+
+copy('alice.txt', 'alicee.txt')
