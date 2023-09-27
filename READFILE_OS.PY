@@ -42,15 +42,7 @@
 def statistics(name):
     count = 0
     with open(name, 'r', encoding='utf-8') as file:
-        text = file.read()
-        words = text.count(" ")
-        lines = text.count("\n")
-        for i in text:
-            count += 1
-
-        print(lines)
-        print(words)
-        print(count)
+        lines = file.readlines()
 
 
 statistics("alice.txt")
