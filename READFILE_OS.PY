@@ -39,10 +39,28 @@
 
 
 #########################################################################################
-def statistics(name):
-    count = 0
-    with open(name, 'r', encoding='utf-8') as file:
-        lines = file.readlines()
+# def statistics(name):
+#     count = 0
+#     with open(name, 'r', encoding='utf-8') as file:
+#         lines = file.readlines()
+#     words = sum([len(line.split(" ")) for line in lines])
+#     characters = sum(len(line) for line in lines)
+#     print(words)
+#     print(characters)
 
 
-statistics("alice.txt")
+# statistics("alice.txt")
+
+############################################################################################
+def find_and_replace(fname, word, replace):
+    with open(fname, 'r+', encoding='utf-8') as file:
+        text = file.read().split(" ")
+        for i in text:
+            if i == word:
+                i = replace
+        print(text)
+
+
+find_and_replace("alice.txt", "she", "nasim")
+
+##########################################################################################
