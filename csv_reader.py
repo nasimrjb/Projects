@@ -1,4 +1,5 @@
 from csv import writer, reader, DictReader
+import jsonpickle
 
 
 # def add_user(first, last):
@@ -22,14 +23,27 @@ from csv import writer, reader, DictReader
 # print_users()
 
 ################################################################
-def find_user(name, family):
-    index = 0
-    with open("users.csv") as file:
-        csv_reader = DictReader(file)
-        for i in csv_reader:
-            index += 1
-            if i['Name'] == name and i['Family'] == family:
-                print(index)
+# def find_user(name, family):
+#     index = 0
+#     with open("users.csv") as file:
+#         csv_reader = DictReader(file)
+#         for i in csv_reader:
+#             index += 1
+#             if i['Name'] == name and i['Family'] == family:
+#                 print(index)
 
 
-find_user("Nasim", "Rajabi")
+# find_user("Nasim", "Rajabi")
+
+####################################################################
+class Cat:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+
+c = Cat("Charles", "sag")
+
+with open("cat.json", "w") as file:
+    frozen = jsonpickle.encode(c)
+    file.write(frozen)
