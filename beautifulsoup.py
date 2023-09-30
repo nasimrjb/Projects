@@ -34,3 +34,8 @@ soup = BeautifulSoup(html, "html.parser")
 # d = soup.select("[data-example]")
 for el in soup.select(".special"):
     print(el.get_text())
+    print(el.name)
+    print(el.attrs)
+attr = soup.find("h3")["data-example"]
+attr2 = soup.find("div")["id"]
+print(attr2)
