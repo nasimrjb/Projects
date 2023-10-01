@@ -24,11 +24,11 @@ html = """
 soup = BeautifulSoup(html, "html.parser")
 # print(soup.body.div)
 # g = soup.find("div")
-# m = soup.find(id="first")
-# mm = soup.select("#first")[0]
+# gg = soup.find(id="first")
+# ggg = soup.select("#first")[0]
 # h = soup.find_all("div")
-# j = soup.find_all(attrs={"data-example": "yes"})
-# jj = soup.select("[data-example]")
+# hh = soup.find_all(attrs={"data-example": "yes"})
+# hhh = soup.select("[data-example]")
 # n = soup.find_all(class_="special")
 # nn = soup.select(".special")
 # d = soup.select("[data-example]")
@@ -38,13 +38,13 @@ soup = BeautifulSoup(html, "html.parser")
 #     print(el.attrs)
 # attr = soup.find("h3")["data-example"]
 # attr2 = soup.find("div")["id"]
-# print(attr2)
+# print(hh)
 
 ############################################################################
-# data = soup.body.contents[1].contents[1]
-# data = soup.body.contents[1].next_sibling.next_sibling
-# data = soup.find(class_="special").parent
+data = soup.body.contents[1].contents[1]
+data = soup.body.contents[1].next_sibling.next_sibling
+data = soup.find(class_="special").parent
 data = soup.find(class_="special").find_next_sibling(class_="special")
-# data = soup.find(id="first").find_next_sibling()
-# data = soup.select("[data-example]")[1].find_previous_sibling()
+data = soup.find(id="first").find_next_sibling()
+data = soup.select("[data-example]")[1].find_previous_sibling()
 print(data)
