@@ -32,10 +32,19 @@ soup = BeautifulSoup(html, "html.parser")
 # n = soup.find_all(class_="special")
 # nn = soup.select(".special")
 # d = soup.select("[data-example]")
-for el in soup.select(".special"):
-    print(el.get_text())
-    print(el.name)
-    print(el.attrs)
-attr = soup.find("h3")["data-example"]
-attr2 = soup.find("div")["id"]
-print(attr2)
+# for el in soup.select(".special"):
+#     print(el.get_text())
+#     print(el.name)
+#     print(el.attrs)
+# attr = soup.find("h3")["data-example"]
+# attr2 = soup.find("div")["id"]
+# print(attr2)
+
+############################################################################
+# data = soup.body.contents[1].contents[1]
+# data = soup.body.contents[1].next_sibling.next_sibling
+# data = soup.find(class_="special").parent
+data = soup.find(class_="special").find_next_sibling(class_="special")
+# data = soup.find(id="first").find_next_sibling()
+# data = soup.select("[data-example]")[1].find_previous_sibling()
+print(data)
