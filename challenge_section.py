@@ -34,3 +34,22 @@
 
 # print(range_in_list([0, 1, 2, 3, 4, 5, 6, 7, 8], 3, 7))
 ###########################################################
+# def nth(lst, num):
+#     for i in lst:
+#         if lst[num] == i:
+#             return i
+
+
+# print(nth([1, 2, 3, 4, 5, 6, 7, 8], -2))
+###########################################################
+def find_the_duplicate(arr):
+    for i in arr:
+        for j in arr:
+            if i != j:
+                if arr[i] == arr[j]:
+                    return arr[i]
+    else:
+        return None
+
+
+print(find_the_duplicate([1, 2, 3, 4, 5, 1, 7, 9, 8]))
