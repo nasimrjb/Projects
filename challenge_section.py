@@ -56,18 +56,43 @@
 
 
 ##########################################################
-def sum_up_diagonals(lst):
-    first = 0
-    second = 0
-    for i, j in enumerate(lst):
-        first += lst[i][i]
-        second += lst[i][-i-1]
-    print(first)
-    print(second)
+# def sum_up_diagonals(lst):
+#     first = 0
+#     second = 0
+#     for i, j in enumerate(lst):
+#         first += lst[i][i]
+#         second += lst[i][-i-1]
+#     print(first)
+#     print(second)
 
 
-print(sum_up_diagonals(
-    [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]))
+# print(sum_up_diagonals(
+#     [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]))
 
 
 #############################################################
+# def min_max_key(dic):
+#     result = {}
+#     result[0] = max(dic.values())
+#     result[1] = min(dic.values())
+#     return result
+
+
+# print(min_max_key({1: 3, 2: 5, 7: 11, 0: 12}))
+
+###################################################################
+def find_greater_numbers(num):
+    count = 0
+    for i in num:
+        for j in num:
+            if i != j:
+                if i < j:
+                    count += 1
+
+    print(count)
+
+
+find_greater_numbers([1, 2, 3])  # 3
+find_greater_numbers([6, 1, 2, 7])  # 4
+find_greater_numbers([5, 4, 3, 2, 1])  # 0
+find_greater_numbers([])  # 0
