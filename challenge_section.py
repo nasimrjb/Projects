@@ -81,18 +81,45 @@
 # print(min_max_key({1: 3, 2: 5, 7: 11, 0: 12}))
 
 ###################################################################
-def find_greater_numbers(num):
+# def find_greater_numbers(num):
+#     count = 0
+#     for i in num:
+#         for j in num:
+#             if i != j:
+#                 if i < j:
+#                     count += 1
+
+#     print(count)
+
+
+# find_greater_numbers([1, 2, 3])  # 3
+# find_greater_numbers([6, 1, 2, 7])  # 4
+# find_greater_numbers([5, 4, 3, 2, 1])  # 0
+# find_greater_numbers([])  # 0
+################################################################
+def two_oldest_ages(lst):
+    maxes = []
+    maxes.append(max(lst))
+    lst.remove(maxes[0])
+    maxes.append(max(lst))
+    return maxes
+
+
+print(two_oldest_ages([1, 50, 3, 6, 67, 34, 23, 45]))
+
+###############################################################
+
+
+def is_odd_string(str):
     count = 0
-    for i in num:
-        for j in num:
-            if i != j:
-                if i < j:
-                    count += 1
+    dct = {"a": 1, "b": 2, "c": 3, "d": 4, 'e': 5, "f": 6,
+           "g": 7, 'h': 8, 'i': 9, "j": 10, "k": 11, "l": 12}
+    for letter in str:
+        count += dct[letter.lower()]
+    if count % 2 == 0:
+        return False
+    return True
 
-    print(count)
 
-
-find_greater_numbers([1, 2, 3])  # 3
-find_greater_numbers([6, 1, 2, 7])  # 4
-find_greater_numbers([5, 4, 3, 2, 1])  # 0
-find_greater_numbers([])  # 0
+print(is_odd_string("abccd"))
+################################################################
