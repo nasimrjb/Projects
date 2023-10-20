@@ -42,14 +42,32 @@
 
 # print(nth([1, 2, 3, 4, 5, 6, 7, 8], -2))
 ###########################################################
-def find_the_duplicate(arr):
-    for i in arr:
-        for j in arr:
-            if i != j:
-                if arr[i] == arr[j]:
-                    return arr[i]
-    else:
-        return None
+# def find_the_duplicate(arr):
+#     for i in arr:
+#         for j in arr:
+#             if i != j:
+#                 if arr[i] == arr[j]:
+#                     return arr[i]
+#     else:
+#         return None
 
 
-print(find_the_duplicate([1, 2, 3, 4, 5, 1, 7, 9, 8]))
+# print(find_the_duplicate([1, 2, 3, 4, 5, 1, 7, 9, 8]))
+
+
+##########################################################
+def sum_up_diagonals(lst):
+    first = 0
+    second = 0
+    for i, j in enumerate(lst):
+        first += lst[i][i]
+        second += lst[i][-i-1]
+    print(first)
+    print(second)
+
+
+print(sum_up_diagonals(
+    [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]))
+
+
+#############################################################
