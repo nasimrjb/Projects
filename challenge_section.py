@@ -134,18 +134,60 @@
 
 
 ###############################################################
-def mode(lst):
-    unique = set(lst)
-    dct = {}
-    for i in unique:
-        dct[i] = 0
-        for j in lst:
-            if j == i:
-                dct[i] += 1
-    frequency = max(dct.values())
-    for r in dct:
-        if dct[r] == frequency:
-            print(r)
+# def mode(lst):
+#     unique = set(lst)
+#     dct = {}
+#     for i in unique:
+#         dct[i] = 0
+#         for j in lst:
+#             if j == i:
+#                 dct[i] += 1
+#     frequency = max(dct.values())
+#     for r in dct:
+#         if dct[r] == frequency:
+#             print(r)
 
 
-mode([1, 2, 2, 2, 2, 2, 22, 3, 4, 4, 5, 4, 4, 4])
+# mode([1, 2, 2, 2, 2, 2, 22, 3, 4, 4, 5, 4, 4, 4])
+
+##############################################################
+# def running_average():
+#     running_average.accumulator = 0
+#     running_average.size = 0
+
+#     def inner(number):
+#         running_average.accumulator += number
+#         running_average.size += 1
+#         return running_average.accumulator / running_average.size
+
+#     return inner
+
+
+# rAvg = running_average()
+# print(rAvg(10))  # 10.0
+# print(rAvg(11))  # 10.5
+# print(rAvg(12))  # 11
+
+# rAvg2 = running_average()
+# print(rAvg2(1))  # 1
+# print(rAvg2(3))  # 2
+
+
+##############################################################
+def letter_counter(str):
+    def freq(l):
+        count = 0
+        for i in str:
+            if i == l:
+                count += 1
+        return count
+    return freq
+
+
+counter = letter_counter('Amazing')
+print(counter('a'))  # 2
+print(counter('m'))  # 1
+
+counter2 = letter_counter('This Is Really Fun!')
+print(counter2('i'))  # 2
+print(counter2('t'))  # 1
