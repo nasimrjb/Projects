@@ -97,29 +97,29 @@
 # find_greater_numbers([5, 4, 3, 2, 1])  # 0
 # find_greater_numbers([])  # 0
 ################################################################
-def two_oldest_ages(lst):
-    maxes = []
-    maxes.append(max(lst))
-    lst.remove(maxes[0])
-    maxes.append(max(lst))
-    return maxes
+# def two_oldest_ages(lst):
+#     maxes = []
+#     maxes.append(max(lst))
+#     lst.remove(maxes[0])
+#     maxes.append(max(lst))
+#     return maxes
 
 
-print(two_oldest_ages([1, 50, 3, 6, 67, 34, 23, 45]))
+# print(two_oldest_ages([1, 50, 3, 6, 67, 34, 23, 45]))
 
 ###############################################################
 
 
-def is_odd_string(str):
-    count = 0
-    dct = {"a": 1, "b": 2, "c": 3, "d": 4, 'e': 5, "f": 6,
-           "g": 7, 'h': 8, 'i': 9, "j": 10, "k": 11, "l": 12}
-    for letter in str:
-        count += dct[letter.lower()]
-    if count % 2 == 0:
-        return False
-    return True
+# def is_odd_string(str):
+#     count = 0
+#     dct = {"a": 1, "b": 2, "c": 3, "d": 4, 'e': 5, "f": 6,
+#            "g": 7, 'h': 8, 'i': 9, "j": 10, "k": 11, "l": 12}
+#     for letter in str:
+#         count += dct[letter.lower()]
+#     if count % 2 == 0:
+#         return False
+#     return True
 
 
-print(is_odd_string("abccd"))
+# print(is_odd_string("abccd"))
 ################################################################
