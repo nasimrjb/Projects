@@ -123,3 +123,29 @@
 
 # print(is_odd_string("abccd"))
 ################################################################
+# def three_odd_numbers(lst):
+#     for i, j in enumerate(lst):
+#         if (lst[i]+lst[i+1]+lst[i+2]) % 2 == 1:
+#             return True
+#         return False
+
+
+# print(three_odd_numbers([2, 2, 4, 4, 4, 4, 4]))
+
+
+###############################################################
+def mode(lst):
+    unique = set(lst)
+    dct = {}
+    for i in unique:
+        dct[i] = 0
+        for j in lst:
+            if j == i:
+                dct[i] += 1
+    frequency = max(dct.values())
+    for r in dct:
+        if dct[r] == frequency:
+            print(r)
+
+
+mode([1, 2, 2, 2, 2, 2, 22, 3, 4, 4, 5, 4, 4, 4])
