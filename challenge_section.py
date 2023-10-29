@@ -174,20 +174,22 @@
 
 
 ##############################################################
-def letter_counter(str):
-    def freq(l):
-        count = 0
-        for i in str:
-            if i == l:
-                count += 1
-        return count
-    return freq
+# def letter_counter(str):
+#     def freq(l):
+#         count = 0
+#         for i in str:
+#             if i == l:
+#                 count += 1
+#         return count
+#     return freq
 
 
-counter = letter_counter('Amazing')
-print(counter('a'))  # 2
-print(counter('m'))  # 1
+# counter = letter_counter('Amazing')
+# print(counter('a'))  # 2
+# print(counter('m'))  # 1
 
-counter2 = letter_counter('This Is Really Fun!')
-print(counter2('i'))  # 2
-print(counter2('t'))  # 1
+# counter2 = letter_counter('This Is Really Fun!')
+# print(counter2('i'))  # 2
+# print(counter2('t'))  # 1
+
+#####################################################
