@@ -26,6 +26,7 @@
 # print(sum)
 
 ########## 3 ##########
+
 # def largest_prime(n):
 #     count = 0
 #     for i in range(n, 0, -1):
@@ -42,6 +43,7 @@
 
 
 ########## 4 ##########
+
 # lst = []
 # for i in range(999):
 #     for j in range(999):
@@ -54,12 +56,33 @@
 # print(max(lst))
 
 ########## 5 ##########
+
+# count = 0
+# for i in range(300000000, 0, -1):
+#     for j in range(20, 0, -1):
+#         if i % j == 0:
+#             count += 1
+#     if count == 20:
+#         print(i)
+#     count = 0
+
+########## 6 ##########
+
+# x = [i*i for i in range(101)]
+# y = (sum([i for i in range(101)]))*(sum([i for i in range(101)]))
+# print(y-sum(x))
+
+########## 7 ##########
+
 count = 0
-for i in range(300000000, 0, -1):
-    for j in range(20, 0, -1):
+lst = []
+for i in range(1, 105000):
+    for j in range(1, i+1):
         if i % j == 0:
             count += 1
-    if count == 20:
-        print(i)
+    if count == 2:
+        lst.append(i)
     count = 0
-########## 6 ##########
+
+print(lst[10000])
+
