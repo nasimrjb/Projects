@@ -26,3 +26,32 @@
 # print(sum)
 
 ########## 3 ##########
+# def largest_prime(n):
+#     count = 0
+#     for i in range(n, 0, -1):
+#         if n % i == 0:
+#             for j in range(i, 0, -1):
+#                 if i % j == 0:
+#                     count += 1
+#             if count == 2:
+#                 return i
+#             count = 0
+
+
+# print(largest_prime(600851475143))
+
+
+######################
+def largest_prime(n):
+    count = 0
+    lst = []
+    for i in range(n, 0, -1):
+        if n % i == 0:
+            count += 1
+        if count == 2:
+            lst.append(i)
+    count = 0
+    return lst
+
+
+print(largest_prime(33))
