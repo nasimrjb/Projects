@@ -104,3 +104,14 @@
 #         print(b, 1000*(500-b) / (1000-b))
 
 ########## 10 ##########
+
+lst = []
+count = 0
+for i in range(2000000):
+    for j in range(1, i):
+        if i % j == 0:
+            count += 1
+    if count == 1:
+        lst.append(i)
+    count = 0
+print(sum(lst))
