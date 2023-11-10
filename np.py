@@ -18,3 +18,4 @@ for row in taxi_list:
 
 # start writing your code below this comment
 taxi = np.array(converted_taxi_list)
+ 
