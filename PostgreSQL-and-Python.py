@@ -2,14 +2,14 @@
 # coding: utf-8
 
 # # Using PostgreSQL in Python (with Psycopg2)
-# 
+#
 # ### Psycopg2
-# 
+#
 # A library that allows Python to connect to an existing PostgreSQL database to utilize SQL functionality.
-# 
+#
 # #### Documentation
 #  * http://initd.org/psycopg/docs/install.html
-# 
+#
 
 # In[ ]:
 
@@ -21,7 +21,7 @@ import psycopg2 as pg2
 
 # Create a connection with PostgreSQL
 # 'password' is whatever password you set, we set password in the install video
-conn = pg2.connect(database='postgres', user='postgres',password='password')
+conn = pg2.connect(database='postgres', user='postgres', password=123456)
 
 
 # In[ ]:
@@ -89,4 +89,3 @@ cur.commit()
 # Don't forget to close the connection!
 # killing the kernel or shutting down juptyer will also close it
 conn.close()
-
