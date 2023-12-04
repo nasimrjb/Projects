@@ -9,15 +9,19 @@
 
 # returnpairs(array)
 
-Array1 = ['a', 'b', 'c', 'x']
-Array2 = ['d', 'e', 'f', 'b']
+##############################################
+# Array1 = ['a', 'b', 'c', 'x']
+# Array2 = ['d', 'e', 'f', 'b']
 
 
-def commonItem(arr1, arr2):
-    for item in arr1:
-        if item in arr2:
-            return True
-    return False
+# def commonItem(arr1, arr2):
+#     for item in arr1:
+#         if item in arr2:
+#             return True
+#     return False
 
 
-print(commonItem(Array1, Array2))
+# print(commonItem(Array1, Array2))
+
+
+###############################################
