@@ -10,8 +10,14 @@
 # returnpairs(array)
 
 Array1 = ['a', 'b', 'c', 'x']
-Array2 = ['d', 'e', 'f', 'x']
+Array2 = ['d', 'e', 'f', 'b']
 
-for item in Array2:
-    if item in Array1:
-        
+
+def commonItem(arr1, arr2):
+    for item in arr1:
+        if item in arr2:
+            return True
+    return False
+
+
+print(commonItem(Array1, Array2))
