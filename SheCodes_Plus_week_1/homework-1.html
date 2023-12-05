@@ -5,33 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework 1</title>
-  </head>
-  <style>
-    h1 {
-      text-align: center;
-      font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
-    }
-    h2 {
-      text-align: center;
-      color: #8064e9;
-      font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
-    }
-    .contact-us {
-      display: block;
-      margin: 0 auto;
-      padding: 10px 20px;
-      background: white;
-      color: rgb(116, 31, 45);
-      border: 1px solid;
-      border-radius: 30px;
-    }
 
-    .contact-us:hover {
-      background-color: rgb(116, 31, 45);
-      color: white;
-      cursor: pointer;
-    }
-  </style>
+    <style>
+      h1 {
+        text-align: center;
+        font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+      }
+      h2 {
+        text-align: center;
+        color: #8064e9;
+        font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+      }
+      .contact-us {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        background: white;
+        background-color: rgb(116, 31, 45);
+        border: 1px solid;
+        border-radius: 30px;
+      }
+
+      .contact-us:hover {
+        background-color: rgb(116, 31, 45);
+        color: white;
+        cursor: pointer;
+      }
+      .new-form {
+        background-color: white;
+      }
+    </style>
+  </head>
+
   <body>
     <h1>👩 SheCodes is a Coding Workshop for Women</h1>
     <h2>Access a new career in Technology</h2>
@@ -42,5 +47,21 @@
     <a href="www.shecodes.io"> Apply Now!</a>
     <p>🌟</p>
     <button class="contact-us">Contact Us!</button>
+
+    <form action="">
+      <div class:"formgroup">
+      <label for="name">enter your name:</label>
+      <input type="text" id="name" required />
+      </div>
+      <div class:"formgroup">
+      <label for="email">enter your email:</label>
+      <input type="email" id="email" required />
+      </div>
+      <div class:"formgroup">
+      <label for="password">enter your password:</label>
+      <input type="password" id="password" required minlength="6"/>
+      </div>
+      <input type="submit" value="create an account" class="new-form" />
+    </form>
   </body>
 </html>
