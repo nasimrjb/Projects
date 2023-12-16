@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>My name is Nasim</h1>
+  </body>
+  <script>
+    let url = "https://jsonplaceholder.typicode.com/comments";
+
+    function displayUsername(response) {
+      let h1 = document.querySelector("h1");
+      h1.innerHTML = `hey, the username is ${response.data[0].email}`;
+    }
+
+    axios.get(url).then(displayUsername);
+  </script>
+</html>
