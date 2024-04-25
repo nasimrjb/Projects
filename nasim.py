@@ -165,9 +165,13 @@ import matplotlib.pyplot as plt
 # df = pd.DataFrame(data)
 # print(df)
 
-data = {'units': [1, 2, 3, 4, 5],
-        'price': [7, 12, 8, 13, 16]}
-# Create a DataFrame df
-df = pd.DataFrame(data)
+# data = {'units': [1, 2, 3, 4, 5],
+#         'price': [7, 12, 8, 13, 16]}
+# # Create a DataFrame df
+# df = pd.DataFrame(data)
 
-df.plot(x='units', y='price')
+# df.plot(x='units', y='price')
+
+import os
+
+print(os.getcwd())
