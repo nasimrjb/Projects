@@ -172,6 +172,8 @@ import matplotlib.pyplot as plt
 
 # df.plot(x='units', y='price')
 
-import os
+# combined = [a + b for a in "life" for b in "study"]
+# print(combined)
 
-print(os.getcwd())
+# words = ["life", "is", "study"]
+# word_lengths = [4, 2, 5]
