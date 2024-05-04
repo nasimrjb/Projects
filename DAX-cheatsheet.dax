@@ -27,6 +27,8 @@ Weekend = IF( 'Calendar Lookup'[Day of Week] IN {6,7}, "Weekend","Weekday")
 
 Weekend Orders = CALCULATE([Total Orders],'Calendar Lookup'[Weekend] = "Weekend")
 
+Total Revenue = SUMX('Sales Data', 'Sales Data'[OrderQuantity] * RELATED('Product Lookup'[ProductPrice]))
+
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 YTD Revenue = CALCULATE([Total Revenue],DATESYTD('Calendar Lookup'[Date]))
