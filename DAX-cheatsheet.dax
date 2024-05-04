@@ -1,0 +1,26 @@
+Price Point = SWITCH(TRUE(),
+'Product Lookup'[ProductPrice] > 500,"High",
+'Product Lookup'[ProductPrice] > 100,"Medium",
+"Low")
+
+
+
+SKU Category = LEFT('Product Lookup'[ProductSKU],SEARCH("-",'Product Lookup'[ProductSKU])-1)
+
+
+QuantityType = IF(
+    'Sales Data'[OrderQuantity] > 1 ,"Mutliple Items", "Single Item")
+
+
+Retail Price = RELATED('Product Lookup'[ProductPrice])
+
+Education Category = SWITCH('Customer Lookup'[EducationLevel],
+"High School", "High School",
+"Partial High School","High School",
+"Bachelors","Undergrad",
+"Partial College","Undergrad",
+"Graduate Degree","Graduate")
+
+Month Short = UPPER(LEFT('Calendar Lookup'[Month Name],3))
+
+Weekend = IF( 'Calendar Lookup'[Day of Week] IN {6,7}, "Weekend","Weekday")
