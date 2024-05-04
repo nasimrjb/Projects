@@ -47,7 +47,7 @@ Pervious Month Revenue = CALCULATE([Total Revenue],DATEADD('Calendar Lookup'[Dat
 
 // Running Total:
 =CALCULATE(Measure, DATESINPERIOD(Calendar[Date], MAX(Calendar[Date]), -10, DAY))
-
+10 Day Rolling Revenue = CALCULATE([Total Revenue],DATESINPERIOD('Calendar Lookup'[Date],MAX('Calendar Lookup'[Date]),-10,DAY))
 // PRO TIP: To calculate a moving average, use the running total calculation above and divide by the number of intervals
 
 
@@ -58,6 +58,8 @@ Pervious Month Revenue = CALCULATE([Total Revenue],DATEADD('Calendar Lookup'[Dat
 //This function is useful for clearing filters and creating calculations on all the rows in a table.
 
 Overall Average Price = CALCULATE([Average Retail Price], ALL('Product Lookup'))
+Average Retail Price = AVERAGE('Product Lookup'[ProductPrice])
+
 
 High Ticket Orders = CALCULATE([Total Orders],FILTER('Product Lookup','Product Lookup'[ProductPrice]>[Overall Average Price]))
 
