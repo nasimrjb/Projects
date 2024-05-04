@@ -24,3 +24,28 @@ Education Category = SWITCH('Customer Lookup'[EducationLevel],
 Month Short = UPPER(LEFT('Calendar Lookup'[Month Name],3))
 
 Weekend = IF( 'Calendar Lookup'[Day of Week] IN {6,7}, "Weekend","Weekday")
+
+Weekend Orders = CALCULATE([Total Orders],'Calendar Lookup'[Weekend] = "Weekend")
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+YTD Revenue = CALCULATE([Total Revenue],DATESYTD('Calendar Lookup'[Date]))
+
+// Time Intelligence patterns are used to calculate common date-based comparisons
+
+
+// Performance To-Date: Use DATESYTD for Years, DATESQTD for Quarters, DATESMTD for Months
+=CALCULATE(Measure, DATESYTD(Calendar[Date]))
+
+// Previous Period: Select an interval (DAY, MONTH, QUARTER, or YEAR)
+// and the # of intervals to compare (e.g. previous month, rolling 10-day)
+=CALCULATE(Measure, DATEADD(Calendar[Date], -1, MONTH))
+
+
+// Running Total:
+=CALCULATE(Measure, DATESINPERIOD(Calendar[Date], MAX(Calendar[Date]), -10, DAY))
+
+// PRO TIP: To calculate a moving average, use the running total calculation above and divide by the number of intervals
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
