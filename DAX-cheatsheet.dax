@@ -42,6 +42,7 @@ YTD Revenue = CALCULATE([Total Revenue],DATESYTD('Calendar Lookup'[Date]))
 // Previous Period: Select an interval (DAY, MONTH, QUARTER, or YEAR)
 // and the # of intervals to compare (e.g. previous month, rolling 10-day)
 =CALCULATE(Measure, DATEADD(Calendar[Date], -1, MONTH))
+Pervious Month Revenue = CALCULATE([Total Revenue],DATEADD('Calendar Lookup'[Date],-1,MONTH))
 
 
 // Running Total:
@@ -51,3 +52,22 @@ YTD Revenue = CALCULATE([Total Revenue],DATESYTD('Calendar Lookup'[Date]))
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////
+
+// ALL : Returns all the rows in a table, or all the values in a column,
+//ignoring any filters that might have been applied.
+//This function is useful for clearing filters and creating calculations on all the rows in a table.
+
+Overall Average Price = CALCULATE([Average Retail Price], ALL('Product Lookup'))
+
+High Ticket Orders = CALCULATE([Total Orders],FILTER('Product Lookup','Product Lookup'[ProductPrice]>[Overall Average Price]))
+
+
+Bike Sales = CALCULATE([Quantity Sold],'Product Categories Lookup'[CategoryName]="Bikes")
+Quantity Sold = SUM('Sales Data'[OrderQuantity])
+Bike Returns = CALCULATE([Total Returns],'Product Categories Lookup'[CategoryName]="Bikes")
+All Returns = CALCULATE([Total Returns],ALL('Returns Data'))
+
+Adjusted Price = [Average Retail Price] * (1 + 'Price Adjustment (%)'[Price Adjustment (%) Value])
+Adjusted Revenue = SUMX('Sales Data', 'Sales Data'[OrderQuantity] * [Adjusted Price])
+Adjusted Profit = [Adjusted Revenue] - [Total Cost]
+Total Cost = SUMX('Sales Data','Sales Data'[OrderQuantity]*RELATED('Product Lookup'[ProductCost]))
