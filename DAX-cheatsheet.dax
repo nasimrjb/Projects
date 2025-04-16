@@ -3,6 +3,8 @@ Price Point = SWITCH(TRUE(),
 'Product Lookup'[ProductPrice] > 100,"Medium",
 "Low")
 
+Full Name = Customers[first_name] & " " & Customers[last_name]
+
 
 
 SKU Category = LEFT('Product Lookup'[ProductSKU],SEARCH("-",'Product Lookup'[ProductSKU])-1)
